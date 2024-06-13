@@ -22,3 +22,12 @@ jobs:
 
       - name: Build PlatformIO Project
         run: pio run
+        
+      - name: Make a file with a lot of repeated text
+        run: |
+          for i in {1..100000}; do echo -n 'foobar' >> foobar.txt; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: foobar.txt
+          compression-level: 9 # maximum compression
