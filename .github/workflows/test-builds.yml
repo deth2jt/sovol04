@@ -26,7 +26,7 @@ on:
 jobs:
   test_builds:
     name: Run All Tests
-    if: github.repository == 'MarlinFirmware/Marlin'
+    if: github.repository == 'deth2jt/sovol04'
 
     runs-on: ubuntu-latest
 
